@@ -39,7 +39,7 @@ buttonAZ.addEventListener("click", function() {
   }
 });
 
-/*buttonZA.addEventListener("click",function(){
+buttonZA.addEventListener("click",function(){
   firstPage.innerHTML = '';
   arrAllDataPokemon.sort(function(a,b){
     if(a.name > b.name)
@@ -57,4 +57,4 @@ buttonAZ.addEventListener("click", function() {
         <img src= "${arrAllDataPokemon[i].img}">
       </div>`;
   }
-});*/
+});
