@@ -3630,7 +3630,4 @@ const POKEMON = {
       "Dark"
     ]
   }]
-}
-;
-
-selectedPokemon(POKEMON);
+};
