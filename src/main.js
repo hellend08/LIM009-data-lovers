@@ -10,7 +10,7 @@ const showPokemonList = (arrAllDataPokemon) => {
     firstPage.innerHTML += `
      <div class="colorPokemon" >
      <figure>
-     <p>Nombre: ${arrAllDataPokemon[i].name}</p>
+     <p>${arrAllDataPokemon[i].name}</p>
      </figure>
      <img src= "${arrAllDataPokemon[i].img}">
      </div>
@@ -21,40 +21,35 @@ showPokemonList(arrAllDataPokemon);
 
 buttonAZ.addEventListener("click", function() {
   firstPage.innerHTML = '';
-  arrAllDataPokemon.sort(function(a,b){
-    if(a.name > b.name)
-      return 1;
-    if(a.name < b.name)
-      return -1;
-    return 0;
-  }); 
   for (let i=0; i<arrAllDataPokemon.length; i++) {
     firstPage.innerHTML += `
       <div class="colorPokemon" >
         <figure>
-          <p>Nombre: ${arrAllDataPokemon[i].name}</p>
+          <p>${arrAllDataPokemon[i].name}</p>
         </figure>
         <img src= "${arrAllDataPokemon[i].img}">
       </div>`;
   }
 });
+showPokemonList(arrAllDataPokemon.sort(order));
 
-/*buttonZA.addEventListener("click",function(){
+buttonZA.addEventListener("click",function(){
   firstPage.innerHTML = '';
-  arrAllDataPokemon.sort(function(a,b){
+  /*arrAllDataPokemon.sort(function(a,b){
     if(a.name > b.name)
       return -1;
     if(a.name < b.name)
       return 1;
     return 0;
-  });  
+  });  */
   for (let i=0; i<arrAllDataPokemon.length; i++) {
     firstPage.innerHTML += `
       <div class="colorPokemon" >
         <figure>
-          <p>Nombre: ${arrAllDataPokemon[i].name}</p>
+          <p>${arrAllDataPokemon[i].name}</p>
         </figure>
         <img src= "${arrAllDataPokemon[i].img}">
       </div>`;
   }
-});*/
+});
+showPokemonList(arrAllDataPokemon.sort(order));
