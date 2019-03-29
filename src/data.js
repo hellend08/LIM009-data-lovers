@@ -1,20 +1,14 @@
-/* Manejo de data */
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global windo
-
 //FUNCIÓN ORDENAR A-Z /Z-A
-function order(a,b){
-  if(a.name > b.name)
+const order = (a, b) => {
+  if (a.name > b.name)
     return 1;
-  if(a.name < b.name)
+  if (a.name < b.name)
     return -1;
   return 0;
-}; 
-window.order= order;
-
-//FUNCIÓN FILTRAR POKEMONES
-
-const filter = function (data, typeP) {
+};
+window.order = order;
+//FILTRADO POR TIPO
+const filter = (data, typeP) => {
   const newArrayType = [];
   for (let i = 0; i < data.length; i++) {
     for (let x = 0; x < data[i].type.length; x++) {
@@ -26,33 +20,36 @@ const filter = function (data, typeP) {
   return newArrayType;
 };
 window.filter = filter;
-
-const filterEgg = function (data, egg) {
+//FILTRADO POR DEBILIDAD  
+const weak = (data, weaknessesP) => {
+  const newArrayWeak = [];
+  for (let i = 0; i < data.length; i++) {
+    for (let x = 0; x < data[i].weaknesses.length; x++) {
+      if (data[i].weaknesses[x] === weaknessesP) {
+        newArrayWeak.push(data[i])
+      }
+    }
+  }
+  return newArrayWeak;
+};
+window.weak = weak;
+//FILTRADO POR HUEVOS
+const filterEgg = (data, selectEgg) => {
   const newArrayEgg = [];
   for (let i=0; i<data.length; i++) {
-    if (data[i].egg === egg) {
-    newArrayEgg.push(data[i].egg)
-    console.log(data[i].egg);
-    } 
+    if (data[i].egg === selectEgg){
+    newArrayEgg.push(data[i]);
+    }
   }
-  console.log(ata[j].egg);
   return newArrayEgg;
 };
 window.filterEgg = filterEgg;
-
-
-
 /*const filtrado = function(valueSelect) {
   const newArray = arrValues.filter(function(allType){
     const typeFilter = allType.type[0] === valueSelect;
     return typeFilter;
   });
-  
   console.log(newArray);
   return newArray;
 }
-
 window.filtrado = filtrado; */
-
-
-

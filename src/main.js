@@ -1,15 +1,14 @@
+const allDataPokemon = POKEMON.pokemon;
 const buttonAZ = document.getElementById("a-z");
 const buttonZA = document.getElementById("z-a");
 const firstPage = document.getElementById("pokemones");
-const allDataPokemon = POKEMON.pokemon;
-const namePokemon = [];
-const arrAllDataPokemon = Object.values(allDataPokemon);
-const selectFilter = document.getElementById("option-pokemon");
-const selectFilterEgg = document.getElementById("option-pokemonegg");
+const selectFilterType = document.getElementById("option-pokemon");
+const selectFilterEgg = document.getElementById("option-pokemon-egg");
+const selectFilterWeak = document.getElementById("option-pokemon-weak");
 
 //PINTAR TODOS LOS POKEMONES
 const showPokemonList = (allDataPokemon) => {
-  for (let i=0; i<allDataPokemon.length; i++) {
+  for (let i=0; i<allDataPokemon.length; i++){
     firstPage.innerHTML += `
      <div class="colorPokemon" >
      <figure>
@@ -23,24 +22,31 @@ const showPokemonList = (allDataPokemon) => {
 showPokemonList(allDataPokemon); 
 
 //ORDENAR DE A-Z
-buttonAZ.addEventListener("click",function(){
+buttonAZ.addEventListener("click", () => {
   firstPage.innerHTML = '';
   showPokemonList(allDataPokemon.sort(order)); 
 });
 
 //ORDENAR DE Z-A
-buttonZA.addEventListener("click",function(){
+buttonZA.addEventListener("click", () => {
   firstPage.innerHTML = '';
   showPokemonList(allDataPokemon.sort(order).reverse());
 });
  
 // FILTRAR POR TIPO DE POKEMON
-selectFilter.addEventListener("change",function(){
+selectFilterType.addEventListener("change", () => {
   firstPage.innerHTML = '';
-  showPokemonList(filter(allDataPokemon,selectFilter.value));
+  showPokemonList(filter(allDataPokemon,selectFilterType.value));
 });
 
-selectFilterEgg.addEventListener("change",function(){
+//FILTRAR POKEMONES POR DEBILIDAD
+selectFilterWeak.addEventListener("change", () => {
+  firstPage.innerHTML = '';
+  showPokemonList(weak(allDataPokemon,selectFilterWeak.value));
+});
+
+//FILTRAR POR HUEVOS
+selectFilterEgg.addEventListener("change", () => {
   firstPage.innerHTML = '';
   showPokemonList(filterEgg(allDataPokemon,selectFilterEgg.value));
 });
