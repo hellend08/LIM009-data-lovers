@@ -1,63 +1,58 @@
 /* Manejo de data */
 // esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+// puedes ver como agregamos la función a nuestro objeto global windo
+
+//FUNCIÓN ORDENAR A-Z /Z-A
 function order(a,b){
   if(a.name > b.name)
     return 1;
   if(a.name < b.name)
     return -1;
   return 0;
-};
-window.order = order;
+}; 
+window.order= order;
 
-/*const selectedPokemon = (pkms) => {
-  const pokemonlist = pkms.pokemon;
-  console.log(pokemonlist);
-  const pagOne = document.getElementById("pokemones");
-  
-  for (let i = 0; i < pokemonlist.length; i++){
-    const node = document.createElement("p");
-    const image = document.createElement("img");
-    image.setAttribute('src', pokemonlist[i].img);
+//FUNCIÓN FILTRAR POKEMONES
 
-    const textnode = document.createTextNode(pokemonlist[i].name );
-    node.appendChild(textnode);
-    
-    pagOne.appendChild(node);
-    pagOne.appendChild(image);
-
-  } */
-  /*const pokemonlist = POKEMON.pokemon;
-  const arrNamesProperty = Object.values(pokemonlist);
-  const filterOption = document.getElementById("option-pokemon");
-  const nuevoArray = [];
-  
-  for (let i=0; i<pokemonlist.length; i++) {
-    filterOption.innerHTML += `
-      <select class="colorPokemon" >
-          <option>${pokemonlist[i].type}</opcion>
-      </select>`;
-  };
-
-  const filterData(data, condition) => {
-    for (let i=0; i<pokemonlist.length; i++){
-    if ()
-   nuevoArray.push()
-    }
-    
-  }*/
-
-  /*function filterOfPoke(pokemonlist){
-    for (let i=0; i<pokemonlist.length; i++){
-
+const filter = function (data, typeP) {
+  const newArrayType = [];
+  for (let i = 0; i < data.length; i++) {
+    for (let x = 0; x < data[i].type.length; x++) {
+      if (data[i].type[x] === typeP) {
+        newArrayType.push(data[i])
+      }
     }
   }
+  return newArrayType;
+};
+window.filter = filter;
 
-  filterOption.addEventListener("change", function(e){
-  console.log(pokemonlist.filter(pokemonlist => pokemonlist.tyoe == select.value ));
-  return;
-  }) 
-  */
+const filterEgg = function (data, egg) {
+  const newArrayEgg = [];
+  for (let i=0; i<data.length; i++) {
+    if (data[i].egg === egg) {
+    newArrayEgg.push(data[i].egg)
+    console.log(data[i].egg);
+    } 
+  }
+  console.log(ata[j].egg);
+  return newArrayEgg;
+};
+window.filterEgg = filterEgg;
 
 
-//window.selectedPokemon = selectedPokemon;
+
+/*const filtrado = function(valueSelect) {
+  const newArray = arrValues.filter(function(allType){
+    const typeFilter = allType.type[0] === valueSelect;
+    return typeFilter;
+  });
+  
+  console.log(newArray);
+  return newArray;
+}
+
+window.filtrado = filtrado; */
+
+
+
