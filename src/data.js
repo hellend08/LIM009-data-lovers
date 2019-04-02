@@ -3,7 +3,7 @@
 // puedes ver como agregamos la función a nuestro objeto global window
 
 //FUNCIÓN ORDENAR A-Z /Z-A
-function order(a, b) {
+const order = (a, b) => {
   if (a.name > b.name)
     return 1;
   if (a.name < b.name)
@@ -14,7 +14,7 @@ window.order = order;
 
 //FUNCIÓN FILTRAR POKEMONES
 
-const filter = function (data, typeP) {
+const filter = (data, typeP) => {
   const newArray = [];
   for (let i = 0; i < data.length; i++) {
     for (let x = 0; x < data[i].type.length; x++) {
@@ -29,7 +29,7 @@ const filter = function (data, typeP) {
 window.filter = filter;
 
 //FUNCIÓN FILTRAR POKEMONES POR DEBILIDAD  
-const weak = function (dataP, weaknessesP) {
+const weak = (dataP, weaknessesP) => {
   const newArray2 = [];
   for (let i = 0; i < dataP.length; i++) {
     for (let x = 0; x < dataP[i].weaknesses.length; x++) {
@@ -42,3 +42,25 @@ const weak = function (dataP, weaknessesP) {
 };
 
 window.weak = weak;
+
+//FUNCIÓN FILTRAR POKEMONES POR HUEVOS 
+const filterEgg = (data, selectEgg) => {
+  const newArrayEgg = [];
+  for (let i = 0; i < data.length; i++) {
+      if (data[i].egg === selectEgg) {
+        newArrayEgg.push(data[i]);
+      }
+    }
+  return newArrayEgg;
+};
+
+window.filterEgg = filterEgg;
+
+// //FUNCIÓN SACAR PROMEDIO DE PESO/ALTURA
+// const average =(data,averageW)=>{
+//   const newAverage = []
+//     for (let i=0; i < data[i].length; i++){
+    
+//     }
+  
+// }
