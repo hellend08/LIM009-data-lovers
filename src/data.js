@@ -8,18 +8,18 @@ const order = (a, b) => {
 };
 window.order = order;
 //FILTRADO POR TIPO
-const filter = (data, typeP) => {
+const filterData = (data, condition) => {
   const newArrayType = [];
   for (let i = 0; i < data.length; i++) {
     for (let x = 0; x < data[i].type.length; x++) {
-      if (data[i].type[x] === typeP) {
+      if (data[i].type[x] === condition) {
         newArrayType.push(data[i])
       }
     }
   }
-  return newArrayType;
+  return newArrayType; //[name, img, type] array de arrays
 };
-window.filter = filter;
+window.filterData = filterData;
 //FILTRADO POR DEBILIDAD  
 const weak = (data, weaknessesP) => {
   const newArrayWeak = [];
@@ -44,12 +44,33 @@ const filterEgg = (data, selectEgg) => {
   return newArrayEgg;
 };
 window.filterEgg = filterEgg;
-/*const filtrado = function(valueSelect) {
-  const newArray = arrValues.filter(function(allType){
-    const typeFilter = allType.type[0] === valueSelect;
-    return typeFilter;
-  });
-  console.log(newArray);
-  return newArray;
+
+//SUMA PESO TODOS LOS POKEMONES***
+window.computeStats = {
+  weight: (data) => {
+    let sumWeight = 0;
+    for ( let i=0; i<data.length; i++) {
+      if (data[i].weight){
+      const number = data[i].weight;
+      const separated = number.split('');
+      const onlyNumber = parseFloat(separated[0] + separated[1] + separated[2] + separated[3]);
+
+      finalResultWeight = sumWeight += parseInt(onlyNumber.toFixed())/ 151;
+      } 
+    }
+  return finalResultWeight.toFixed();
+  },
+  height: (data) => {
+    let sumheight = 0;
+    for ( let i=0; i<data.length; i++) {
+      if (data[i].height){
+      const numberSecond = data[i].height;
+      const separatedSecond = numberSecond.split('');
+      const onlyNumberSecond = parseFloat(separatedSecond[0] + separatedSecond[1] + separatedSecond[2] + separatedSecond[3]);
+    
+      finalResultheight = sumheight += parseInt(onlyNumberSecond.toFixed())/151;
+      }
+    }
+  return finalResultheight.toFixed();
+  }
 }
-window.filtrado = filtrado; */

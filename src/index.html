@@ -8,7 +8,6 @@
   <body>
     <div id="loader"></div>
     <div id="root"></div>
-     <h1>¡POKÉMON GO!</h1>
      <button id="a-z" >POKEMON A-Z</button>
      <button id="z-a" >POKEMON Z-A</button>
 
@@ -30,7 +29,7 @@
       <option value="Ghost">Ghost</option>
      </select> 
 
-     <select class="lista" id ="option-pokemon-weak" >
+     <select class="list" id ="option-pokemon-weak" >
       <option value="play-now">Debilidad por Pokémon</option>
       <option value="Grass">Grass</option>
       <option value="Poison">Poison</option> 
@@ -57,8 +56,12 @@
       <option value="10 km">10 km</option>
       <option value="Not in Eggs">Not in Eggs</option>
      </select>
+     <button id="all-weight" >DATO PESO</button>
+     <button id="all-height" >DATO TALLA</button>
 
-    <aside class="sections-container" id="sections-menu"></aside>
+    <aside class="sections-container" id="sections-menu">
+      <p class="text-stats" id="stats"></p>
+    </aside>
     <div class="pokemon-list" id="pokemones" ></div>
     
     <script src="loader.js"></script>
