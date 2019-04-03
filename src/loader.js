@@ -1,4 +1,4 @@
-var loader;
+// const loader;
 function loadNow(opacity) {
     if(opacity <= 0) {
         displayContent();
