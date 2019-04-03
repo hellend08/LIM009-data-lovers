@@ -1,75 +1,129 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Poke Paradise</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="loader"></div>
-    <div id="root"></div>
-    <h1>¡POKÉMON GO!</h1>
-    <button id="a-z" >POKEMON A-Z</button>
-    <button id="z-a" >POKEMON Z-A</button>
-    <!-- <select class="lista" id ="option-pokemon" >
-      <option value="play-now">ID de tu Pokemon</option>
-      <option value="1-150">1-150</option>
-      <option value="1-150">1-150</option> 
-     </select>  -->
-     <select class="lista" id ="option-pokemon" >
-      <option value="play-now">Tipos de Pokemon</option>
-      <option value="Grass">Grass</option>
-      <option value="Poison">Poison</option> 
-      <option value="Fire">Fire</option>
-      <option value="Water">Water</option>
-      <option value="Ice">Ice</option>
-      <option value="Flying">Flying</option> 
-      <option value="Psychic">Psychic</option>
-      <option value="Rock">Rock</option>
-      <option value="Ground">Ground</option>
-      <option value="Electric">Electric</option> 
-      <option value="Bug">Bug</option>
-      <option value="Normal">Normal</option>
-      <option value="Fighting">Fighting</option>
-      <option value="Ghost">Ghost</option>
-     </select> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Poke Paradise</title>
+  <link rel="shortcut icon"
+    href="https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-17015278258617bdog.png">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-     <select class="lista" id ="option-pokemon2" >
-      <option value="play-now">Selecciona por debilidad</option>
-      <option value="Grass">Grass</option>
-      <option value="Poison">Poison</option> 
-      <option value="Fire">Fire</option>
-      <option value="Water">Water</option>
-      <option value="Ice">Ice</option>
-      <option value="Flying">Flying</option> 
-      <option value="Psychic">Psychic</option>
-      <option value="Rock">Rock</option>
-      <option value="Ground">Ground</option>
-      <option value="Electric">Electric</option> 
-      <option value="Bug">Bug</option>
-      <option value="Normal">Normal</option>
-      <option value="Fighting">Fighting</option>
-      <option value="Ghost">Ghost</option>
-      <option value="Dark">Dark</option>
-      <option value="Fairy">Fairy</option>
-     </select> 
-     
-     <select class="lista" id ="option-pokemon3" >
-      <option value="play-now">Egg</option>
-      <option value="2 km">2 km</option>
-      <option value="5 km">5 km</option> 
-      <option value="10 km">10 km</option>
-      
-     </select> 
+<body>
+  <!-- HEADER -->
+  <header>
+    <div id="loader"></div>
+    <div class="container">
+      <div id="branding">
+        <h1><img src="./img/logo_poke.png" class="logo"></h1>
+      </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="index.html">Home</a></li>
+          <li><a href="#newsletter">RANDOM</a></li>
+          <li><a href="#root">FILTER</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ <!-- DATO CURIOSO/OPERACIÓN -->
+  <section id="newsletter">
+    <div class="container">
+      <h1>¡Usa la búsqueda avanzada para encontrar Pokémones según su tipo, debilidad, habilidad y demás datos! </h1>
+      <h4> DATO CURIOSO: ¿Sabías cuál es el tamaño o altura promedio de todos los pokémones?</h4>
+      <button id="all-height" class="button_2" style="margin: 10px">Talla </button>
+      <button id="all-weight" class="button_2">Peso</button>
+      <aside class="sections-container" id="sections-menu">
+        <p class="text-stats" id="stats"></p>
+      </aside>
+    </div>
+  </section>
+ <!-- INFORMACIÓN -->
+  <section id="boxes">
+    <div class="container">
+      <div class="box">
+        <img src="./img/logo_html.png" class="img">
+        <h3>Ordena Alfabéticamente</h3>
+        <p>¡Aprender los nombres de los 151 Pokémones de forma ordenada y fácil!</p>
+      </div>
+      <div class="box">
+        <img src="./img/logo_brush.png" class="img">
+        <h3>Clasifica por tipo</h3>
+        <p>¿Sabías que existen más de 10 tipos de Pokemon? Clasifica a tus pokemones por tipo y debilidad y conviértete
+          en un gran MAESTRO POKEMON</p>
+        <p class="text-stats" id="stats"></p>
+      </div>
+      <div class="box">
+        <img src="./img/logo_css.png" class="img">
+        <h3>Eclosiona tu huevo por km</h3>
+        <p>Averigua que huevos eclosionan después de 2km, 5km y 10km y obtén nuevos pokemones</p>
+      </div>
+    </div>
+  </section>
+ <!-- FILTRADO -->
+  <section id="true">
+    <div id="root">
+      <button id="a-z" class="button_2">POKEMON A-Z </button>
+      <button id="z-a" class="button_2">POKEMON Z-A </button>
+
+      <select class="lista" id="option-pokemon">
+        <option value="play-now">Tipos de Pokemon</option>
+        <option value="Grass">Hierba</option>
+        <option value="Poison">Veneno</option>
+        <option value="Fire">Fuego</option>
+        <option value="Water">Agua</option>
+        <option value="Ice">Hielo</option>
+        <option value="Flying">Volador</option>
+        <option value="Psychic">Psíquico</option>
+        <option value="Rock">Roca</option>
+        <option value="Ground">Piedra</option>
+        <option value="Electric">Eléctrico</option>
+        <option value="Bug">Bicho</option>
+        <option value="Normal">Normal</option>
+        <option value="Fighting">Peleador</option>
+        <option value="Ghost">Fantasma</option>
+      </select>
+
+      <select class="lista" id="option-pokemon-weak">
+        <option value="play-now">Selecciona por debilidad</option>
+        <option value="Grass">Hierba</option>
+        <option value="Poison">Veneno</option>
+        <option value="Fire">Fuego</option>
+        <option value="Water">Agua</option>
+        <option value="Ice">Hielo</option>
+        <option value="Flying">Volador</option>
+        <option value="Psychic">Psíquico</option>
+        <option value="Rock">Roca</option>
+        <option value="Ground">Piedra</option>
+        <option value="Electric">Eléctrico</option>
+        <option value="Bug">Bicho</option>
+        <option value="Normal">Normal</option>
+        <option value="Fighting">Peleador</option>
+        <option value="Ghost">Fantasma</option>
+        <option value="Dark">Oscuro</option>
+        <option value="Fairy">Hada</option>
+      </select>
+
+      <select class="lista" id="option-pokemon-egg">
+        <option value="play-now">Huevos</option>
+        <option value="2 km">2 km</option>
+        <option value="5 km">5 km</option>
+        <option value="10 km">10 km</option>
+
+      </select>
       <aside class="sections-container" id="sections-menu"></aside>
-    <div class="pokemon-list" id="pokemones" ></div>
-    
-    <script src="loader.js"></script>
-    <script src="./data/pokemon/pokemon.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-    
-    
-    
-  </body>
+      <div class="pokemon-list" id="pokemones"></div>
+  </section>
+  </div>
+   <!-- FOOTER -->
+  <footer>
+    <p>Poke Paradise, Copyright &copy; 2019</p>
+  </footer>
+
+  <script src="loader.js"></script>
+  <script src="./data/pokemon/pokemon.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

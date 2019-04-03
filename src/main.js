@@ -1,56 +1,67 @@
+const allDataPokemon = POKEMON.pokemon;
 const buttonAZ = document.getElementById("a-z");
 const buttonZA = document.getElementById("z-a");
 const firstPage = document.getElementById("pokemones");
-const allDataPokemon = POKEMON.pokemon;
-// const arrAllDataPokemon = Object.values(allDataPokemon);
-const selectFilter = document.getElementById("option-pokemon");
-const selectFilter2 = document.getElementById("option-pokemon2");
-const selectFilter3 = document.getElementById("option-pokemon3");
-// const namePokemon = [];
+const selectFilterType = document.getElementById("option-pokemon");
+const selectFilterWeak = document.getElementById("option-pokemon-weak");
+const selectFilterEgg = document.getElementById("option-pokemon-egg");
+const buttonSumWeight = document.getElementById("all-weight");
+const buttonSumHeight = document.getElementById("all-height");
+const resultStats = document.getElementById("stats");
 
 //PINTAR TODOS LOS POKEMONES
 const showPokemonList = (allDataPokemon) => {
-  for (let i=0; i<allDataPokemon.length; i++) {
+  for (let i = 0; i < allDataPokemon.length; i++) {
     firstPage.innerHTML += `
      <div class="colorPokemon" >
-     <p>Nombre: ${allDataPokemon[i].name}</p>
-     <p>${allDataPokemon[i].egg}</p>
+     <p>${allDataPokemon[i].name}</p>
      <figure>
      <img src= "${allDataPokemon[i].img}">
      </figure>
+     <p>${allDataPokemon[i].num}</p>
+     <p>${allDataPokemon[i].egg}</p>
      </div>
     ` ;
   }
 }
-showPokemonList(allDataPokemon); 
+showPokemonList(allDataPokemon);
 
 //ORDENAR DE A-Z
-buttonAZ.addEventListener("click",() => {
+buttonAZ.addEventListener("click", () => {
   firstPage.innerHTML = '';
-showPokemonList(allDataPokemon.sort(order)); 
+  showPokemonList(allDataPokemon.sort(order));
 });
 
 
 //ORDENAR DE Z-A
-buttonZA.addEventListener("click",() => {
+buttonZA.addEventListener("click", () => {
   firstPage.innerHTML = '';
   showPokemonList(allDataPokemon.sort(order).reverse());
 });
- 
+
 // FILTRAR POR TIPO DE POKEMON
-selectFilter.addEventListener("change",() => {
+selectFilterType.addEventListener("change", () => {
   firstPage.innerHTML = '';
-  showPokemonList(filter(allDataPokemon,selectFilter.value));
+  showPokemonList(filterData(allDataPokemon, selectFilterType.value));
 });
 
 //FILTRAR POKEMONES POR DEBILIDAD
-selectFilter2.addEventListener("change",() => {
+selectFilterWeak.addEventListener("change", () => {
   firstPage.innerHTML = '';
-  showPokemonList(weak(allDataPokemon,selectFilter2.value));
+  showPokemonList(weak(allDataPokemon, selectFilterWeak.value));
 });
 
 //FILTRAR POKEMONES POR HUEVOS
-selectFilter3.addEventListener("change",() => {
+selectFilterEgg.addEventListener("change", () => {
   firstPage.innerHTML = '';
-  showPokemonList(filterEgg(allDataPokemon,selectFilter3.value));
+  showPokemonList(filterEgg(allDataPokemon, selectFilterEgg.value));
+});
+
+//HACER CÁLCULO DEL PROMEDIO DE LA SUMA DE ALTURA Y PESO DE TODOS LOS POKEMONES
+buttonSumWeight.addEventListener("click", () => {
+  resultStats.innerHTML = ("El promedio de su peso es " + computeStats.weight(allDataPokemon) + "kg.");
+});
+
+buttonSumHeight.addEventListener("click", () => {
+  resultStats.innerHTML = ("El promedio de su talla es " + computeStats.height(allDataPokemon) + "m.");
 });
