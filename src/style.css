@@ -1,12 +1,270 @@
-#loader {
+body{
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    background-color:#f4f4f4;
+  }
+  
+  #loader {
     position: fixed;
     width: 100%;
     height: 100vh;
     z-index: 1;
     overflow: visible;
     background: rgb(255, 255, 255) url('http://fanaru.com/pokemon/image/180999-pokemon-pokemon.gif') no-repeat center center;
-}
-.colorPokemon {
+  }
+  /* Global */
+  .container{
+    width:80%;
+    margin:auto;
+    overflow:hidden;
+  }
+  
+  ul{
+    margin:0;
+    padding:0;
+  }
+  
+  .button_1{
+    height:38px;
+    background:#e8491d;
+    border:0;
+    padding-left: 20px;
+    padding-right:20px;
+    color:#ffffff;
+  }
+  
+  .button_2{
+    height:38px;
+    background:#e8491d;
+    border:0;
+    padding-left: 20px;
+    padding-right:20px;
+    color:#ffffff;
+  }
+  .dark{
+    padding:15px;
+    background:#35424a;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom:10px;
+  }
+  
+  
+  
+  header a{
+    color:black; 
+    font-weight: bold;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size:16px;
+  } 
+  
+  header li{
+    float:left;
+    display:inline;
+    padding: 0 40px 0 20px;
+  }
+  
+  header #branding{
+    float:left;
+  }
+  
+  header #branding h1{
+    margin:0;
+  }
+  
+  header nav{
+    float:right;
+    margin-top:30px;
+  }
+  
+  header .highlight, header .current a{
+    color:#e8491d ;
+    font-weight:bold;
+  }
+  
+  header a:hover{
+    color:#cccccc;
+    font-weight:bold;
+  } 
+  
+  
+  
+  /* Newsletter */
+  #newsletter{
+    padding:15px;
+    color:#ffffff;
+    background:#35424a;
+    text-align: center;
+  }
+  
+  #newsletter h1{
+    float:left;
+    text-align: center;
+  }
+  
+  #newsletter form {
+    float:right;
+    margin-top:15px;
+  }
+  
+  #newsletter input[type="email"]{
+    padding:4px;
+    height:25px;
+    width:250px;
+  }
+  
+  /* Boxes */
+  #boxes{
+    margin-top:20px;
+  }
+  
+  #boxes .box{
+    float:left;
+    text-align: center;
+    width:30%;
+    padding:10px;
+  }
+  
+  #boxes .box img{
+    width:90px;
+  }
+  
+  .colorPokemon {
     display: inline-block;
     text-align: center;
-}
+    font-weight: bold;
+    /* border: 1px solid #e8491d; */
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color .5s;
+  }
+  
+  .colorPokemon:hover {
+    background-color:#F6E653;
+  }
+  
+  
+  #root{
+    text-align: center;
+  }
+  
+  
+  /* Sidebar */
+  aside#sidebar{
+    float:right;
+    width:30%;
+    margin-top:10px;
+  }
+  
+  aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width:90%;
+    padding:5px;
+  }
+  
+  .logo{
+    height: 50px;
+    width: 240px;
+    margin-top: 15px;
+    margin-left: -28px;
+  }
+  .img{
+    height: 90px;
+    width: 30px;
+  }
+  /* Main-col */
+  article#main-col{
+    float:left;
+    width:65%;
+  }
+  
+  /* Services */
+  ul#services li{
+    list-style: none;
+    padding:20px;
+    border: #cccccc solid 1px;
+    margin-bottom:5px;
+    background:#e6e6e6;
+  }
+  
+  
+  
+  footer{
+    padding:10px;
+    margin-top:10px;
+    color:#ffffff;
+    background-color:#e8491d;
+    text-align: center;
+  }
+  
+  header {
+    /* min-height: 450px; */
+    background: url(http://i65.tinypic.com/2ewf6o5.jpg) no-repeat 0 -60px;
+    text-align: center;
+    background-size: 105% 125%;
+    color: #ffffff;
+    height: 77vh;
+  }
+  
+  /* Media Queries */
+  @media(max-width: 768px){
+    header #branding,
+    header
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar{
+      float:none;
+      text-align:center;
+      width:100%;
+    }
+  
+    header{
+     
+      padding-bottom:20px;
+    }
+  
+    
+    #showcase h1{
+      margin-top:40px;
+    }
+  
+    #newsletter button, .quote button{
+      display:block;
+      width:100%;
+    }
+  
+    #newsletter form input[type="email"], .quote input, .quote textarea{
+      width:100%;
+      margin-bottom:5px;
+    }
+  }
+  
+  
+  @media (max-width: 650px){
+  header {
+      background-size: cover;
+      height: 37vh;
+  }}
+  
+  @media (max-width: 426px){
+    header {
+      background-size: cover;
+      height: 145px;
+      padding-bottom: 0vh;
+  }
+  
+  
+  }
+  
+  
+  @media (max-width: 320px){
+  header {
+      height: 131px;
+      padding-bottom: 0vh;
+  }}
+  

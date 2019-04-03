@@ -3,61 +3,65 @@ const buttonAZ = document.getElementById("a-z");
 const buttonZA = document.getElementById("z-a");
 const firstPage = document.getElementById("pokemones");
 const selectFilterType = document.getElementById("option-pokemon");
-const selectFilterEgg = document.getElementById("option-pokemon-egg");
 const selectFilterWeak = document.getElementById("option-pokemon-weak");
+const selectFilterEgg = document.getElementById("option-pokemon-egg");
 const buttonSumWeight = document.getElementById("all-weight");
 const buttonSumHeight = document.getElementById("all-height");
 const resultStats = document.getElementById("stats");
 
 //PINTAR TODOS LOS POKEMONES
 const showPokemonList = (allDataPokemon) => {
-  for (let i=0; i<allDataPokemon.length; i++){
+  for (let i = 0; i < allDataPokemon.length; i++) {
     firstPage.innerHTML += `
      <div class="colorPokemon" >
-     <figure>
      <p>${allDataPokemon[i].name}</p>
-     </figure>
+     <figure>
      <img src= "${allDataPokemon[i].img}">
+     </figure>
+     <p>${allDataPokemon[i].num}</p>
+     <p>${allDataPokemon[i].egg}</p>
      </div>
     ` ;
   }
 }
-showPokemonList(allDataPokemon); 
+showPokemonList(allDataPokemon);
 
 //ORDENAR DE A-Z
 buttonAZ.addEventListener("click", () => {
   firstPage.innerHTML = '';
-  showPokemonList(allDataPokemon.sort(order)); 
+  showPokemonList(allDataPokemon.sort(order));
 });
+
 
 //ORDENAR DE Z-A
 buttonZA.addEventListener("click", () => {
   firstPage.innerHTML = '';
   showPokemonList(allDataPokemon.sort(order).reverse());
 });
- 
+
 // FILTRAR POR TIPO DE POKEMON
 selectFilterType.addEventListener("change", () => {
   firstPage.innerHTML = '';
-  showPokemonList(filterData(allDataPokemon,selectFilterType.value));
+  showPokemonList(filterData(allDataPokemon, selectFilterType.value));
 });
 
 //FILTRAR POKEMONES POR DEBILIDAD
 selectFilterWeak.addEventListener("change", () => {
   firstPage.innerHTML = '';
-  showPokemonList(weak(allDataPokemon,selectFilterWeak.value));
+  showPokemonList(weak(allDataPokemon, selectFilterWeak.value));
 });
 
-//FILTRAR POR HUEVOS
+//FILTRAR POKEMONES POR HUEVOS
 selectFilterEgg.addEventListener("change", () => {
   firstPage.innerHTML = '';
-  showPokemonList(filterEgg(allDataPokemon,selectFilterEgg.value));
+  showPokemonList(filterEgg(allDataPokemon, selectFilterEgg.value));
 });
 
+//HACER CÁLCULO DEL PROMEDIO DE LA SUMA DE ALTURA Y PESO DE TODOS LOS POKEMONES
 buttonSumWeight.addEventListener("click", () => {
-  resultStats.innerHTML = ("El promedio de su peso es " + computeStats.weight(allDataPokemon) + "kg." );
+  resultStats.innerHTML = ("El promedio de su peso es " + computeStats.weight(allDataPokemon) + "kg.");
 });
 
 buttonSumHeight.addEventListener("click", () => {
-  resultStats.innerHTML = ("El promedio de su talla es " + computeStats.height(allDataPokemon) + "m." );
+  resultStats.innerHTML = ("El promedio de su talla es " + computeStats.height(allDataPokemon) + "m.");
 });
