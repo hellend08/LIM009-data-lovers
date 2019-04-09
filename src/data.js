@@ -6,7 +6,7 @@ const order = (a, b) => {
     return -1;
   return 0;
 };
-window.order = order;
+// window.order = order;
 //FILTRADO POR TIPO
 const filterData = (data, condition) => {
   const newArrayType = [];
@@ -19,7 +19,7 @@ const filterData = (data, condition) => {
   }
   return newArrayType; //[name, img, type] array de arrays
 };
-window.filterData = filterData;
+// window.filterData = filterData;
 //FILTRADO POR DEBILIDAD  
 const weak = (data, weaknessesP) => {
   const newArrayWeak = [];
@@ -32,7 +32,7 @@ const weak = (data, weaknessesP) => {
   }
   return newArrayWeak;
 };
-window.weak = weak;
+// window.weak = weak;
 //FILTRADO POR HUEVOS
 const filterEgg = (data, selectEgg) => {
   const newArrayEgg = [];
@@ -43,12 +43,13 @@ const filterEgg = (data, selectEgg) => {
   }
   return newArrayEgg;
 };
-window.filterEgg = filterEgg;
+// window.filterEgg = filterEgg;
 
 //SUMA PESO TODOS LOS POKEMONES***
 window.computeStats = {
   weight: (data) => {
     let sumWeight = 0;
+    let finalResultWeight = 0;
     for ( let i=0; i<data.length; i++) {
       if (data[i].weight){
       const number = data[i].weight;
@@ -62,6 +63,7 @@ window.computeStats = {
   },
   height: (data) => {
     let sumheight = 0;
+    let finalResultheight = 0;
     for ( let i=0; i<data.length; i++) {
       if (data[i].height){
       const numberSecond = data[i].height;
@@ -74,3 +76,11 @@ window.computeStats = {
   return finalResultheight.toFixed();
   }
 }
+
+window.dataPokemon = {
+  order,
+  weak,
+  filterData,
+  filterEgg, 
+  computeStats,
+};

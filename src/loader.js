@@ -1,4 +1,4 @@
-// const loader;
+/* // const loader;
 function loadNow(opacity) {
     if(opacity <= 0) {
         displayContent();
@@ -19,4 +19,4 @@ function displayContent() {
 document.addEventListener("DOMContentLoaded", function() {
     loader = document.getElementById('loader');
     loadNow(1);
-});
+}); */
