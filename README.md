@@ -20,7 +20,7 @@
 
 Es una plataforma web en la cual el usuario podrá tener las opciones de filtrado de pokémones por tipo, debilidades, huevos. Además contará con datos extras como el promedio de estatura y peso de los 151 pokémones. Esperamos que sea de gran utilidad para los nuevos entrenadores pokemon.
 # Entrevistas
-Se hicieron 3 entrevistas a usuarios de Pokemón Go, para conocer sus afinidades con la app y preguntarles acerca de la necesidad de creación de una plataforma de búsqueda:
+Se hicieron 4 entrevistas a usuarios de Pokemón Go, para conocer sus afinidades con la app y preguntarles acerca de la necesidad de creación de una plataforma de búsqueda:
 
 ![enter image description here](http://i65.tinypic.com/288a3j5.jpg)
 ![enter image description here](http://i65.tinypic.com/16hnur7.jpg)
@@ -30,6 +30,8 @@ Se hicieron 3 entrevistas a usuarios de Pokemón Go, para conocer sus afinidades
 ![enter image description here](http://i64.tinypic.com/2dwbyq9.png)
 
 La primera historia de usuario se llegó a realizar, pero al momento de los test se nos hizo complicado testearla, por eso tuvimos que prescindir de ella.
+
+
 ![enter image description here](http://66.media.tumblr.com/4c7650666eeb9b9ec186db201b72909a/tumblr_mpeixfKnFE1sxl7y7o1_500.gif)
 
 # Diseño de Interfaz de Usuario
