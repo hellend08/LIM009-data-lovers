@@ -61,7 +61,7 @@ body{
   } 
   
   header li{
-    /* float:left; */
+    /*float:left;*/
     display:inline;
     padding: 0 40px 0 20px;
   }

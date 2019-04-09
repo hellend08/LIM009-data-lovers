@@ -1,4 +1,4 @@
-/* // const loader;
+// const loader;
 function loadNow(opacity) {
     if(opacity <= 0) {
         displayContent();
@@ -13,10 +13,10 @@ function loadNow(opacity) {
 
 function displayContent() {
     loader.style.display = 'none';
-    document.getElementById('root').style.display = 'block';
+    document.getElementById('container').style.display = 'block';
 }
 
 document.addEventListener("DOMContentLoaded", function() {
     loader = document.getElementById('loader');
     loadNow(1);
-}); */
+});

@@ -7,15 +7,13 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-    "example": false,
-    "loader":false,
     "POKEMON": false,
-    "sort" : false,
+    "order": false,
+    "filterData": false,
+    "weak": false,
+    "filterEgg": false,
     "computeStats": false,
-    "order" : false,
-    "filterData" : false,
-    "weak" : false,
-    "filterEgg" : false,
-    "dataPokemon": false
+    "sortData": false,
+    "filterWeak": false
   }
 }
