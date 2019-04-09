@@ -7,6 +7,13 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-    "example": false
+    "POKEMON": false,
+    "order": false,
+    "filterData": false,
+    "weak": false,
+    "filterEgg": false,
+    "computeStats": false,
+    "sortData": false,
+    "filterWeak": false
   }
 }

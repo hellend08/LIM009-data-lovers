@@ -1,22 +1,22 @@
-// const loader;
-function loadNow(opacity) {
-    if(opacity <= 0) {
-        displayContent();
-    }
-    else {
-        loader.style.opacity = opacity;
-        window.setTimeout(function() {
-            loadNow(opacity - 0.05)
-        }, 150);
-    }
-}
+// // const loader;
+// function loadNow(opacity) {
+//     if(opacity <= 0) {
+//         displayContent();
+//     }
+//     else {
+//         loader.style.opacity = opacity;
+//         window.setTimeout(function() {
+//             loadNow(opacity - 0.05)
+//         }, 150);
+//     }
+// }
 
-function displayContent() {
-    loader.style.display = 'none';
-    document.getElementById('root').style.display = 'block';
-}
+// function displayContent() {
+//     loader.style.display = 'none';
+//     document.getElementById('root').style.display = 'block';
+// }
 
-document.addEventListener("DOMContentLoaded", function() {
-    loader = document.getElementById('loader');
-    loadNow(1);
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//     loader = document.getElementById('loader');
+//     loadNow(1);
+// });

@@ -4,13 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Poke Paradise</title>
-  <link rel="shortcut icon"
-    href="https://purepng.com/public/uploads/large/purepng.com-pokeballpokeballdevicepokemon-ballpokemon-capture-ball-17015278258617bdog.png">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <!-- HEADER -->
   <header>
     <div id="loader"></div>
     <div class="container">
@@ -26,7 +22,6 @@
       </nav>
     </div>
   </header>
- <!-- DATO CURIOSO/OPERACIÓN -->
   <section id="newsletter">
     <div class="container">
       <h1>¡Usa la búsqueda avanzada para encontrar Pokémones según su tipo, debilidad, habilidad y demás datos! </h1>
@@ -38,7 +33,6 @@
       </aside>
     </div>
   </section>
- <!-- INFORMACIÓN -->
   <section id="boxes">
     <div class="container">
       <div class="box">
@@ -51,7 +45,7 @@
         <h3>Clasifica por tipo</h3>
         <p>¿Sabías que existen más de 10 tipos de Pokemon? Clasifica a tus pokemones por tipo y debilidad y conviértete
           en un gran MAESTRO POKEMON</p>
-        <p class="text-stats" id="stats"></p>
+        <p class="text-stats" id="stats-parrafo"></p>
       </div>
       <div class="box">
         <img src="./img/logo_css.png" class="img">
@@ -60,12 +54,10 @@
       </div>
     </div>
   </section>
- <!-- FILTRADO -->
   <section id="true">
     <div id="root">
       <button id="a-z" class="button_2">POKEMON A-Z </button>
       <button id="z-a" class="button_2">POKEMON Z-A </button>
-
       <select class="lista" id="option-pokemon">
         <option value="play-now">Tipos de Pokemon</option>
         <option value="Grass">Hierba</option>
@@ -83,7 +75,6 @@
         <option value="Fighting">Peleador</option>
         <option value="Ghost">Fantasma</option>
       </select>
-
       <select class="lista" id="option-pokemon-weak">
         <option value="play-now">Selecciona por debilidad</option>
         <option value="Grass">Hierba</option>
@@ -103,24 +94,19 @@
         <option value="Dark">Oscuro</option>
         <option value="Fairy">Hada</option>
       </select>
-
       <select class="lista" id="option-pokemon-egg">
         <option value="play-now">Huevos</option>
         <option value="2 km">2 km</option>
         <option value="5 km">5 km</option>
         <option value="10 km">10 km</option>
-
       </select>
-      <aside class="sections-container" id="sections-menu"></aside>
+      <aside class="sections-container" id="sections-menu-two"></aside>
       <div class="pokemon-list" id="pokemones"></div>
+    </div>
   </section>
-  </div>
-   <!-- FOOTER -->
   <footer>
     <p>Poke Paradise, Copyright &copy; 2019</p>
   </footer>
-
-  <script src="loader.js"></script>
   <script src="./data/pokemon/pokemon.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
