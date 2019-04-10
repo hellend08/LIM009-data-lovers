@@ -27,7 +27,7 @@ const filterData = (data, condition) => {
       }
     }
   }
-  return newArrayType; //[name, img, type] array de arrays
+  return newArrayType;
 };
 window.filterData = filterData;
 //FILTRADO POR DEBILIDAD  
