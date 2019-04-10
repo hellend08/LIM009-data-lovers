@@ -17,7 +17,7 @@ const showPokemonList = (allDataPokemon) => {
      <figure>
      <img src= "${allDataPokemon[i].img}">
      </figure>
-     <p>${allDataPokemon[i].num}</p>
+     <p>${allDataPokemon[i].egg}</p>
      </div>
     ` ;
   }

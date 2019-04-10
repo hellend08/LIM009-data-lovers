@@ -224,6 +224,7 @@ describe('computeStats', () => {
     expect(typeof window.computeStats.height).toBe('function');
   });
 
+
   it('debería retornar el promedio de "height" de los Pokemones', () => {
     expect(window.computeStats.height(POKEMON, sumHeight)).toEqual(resultSumHeight);
   });
