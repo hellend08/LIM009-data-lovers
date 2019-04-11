@@ -70,9 +70,6 @@ const inputSort = [{
 {"name": "Venusaur"},
 {"name": "Charmander",}];
 
-const condition1 = "Az";
-const condition2 = "Za";
-
 const outputSortAZ = [{
  "name": "Bulbasaur"},
 {"name": "Charmander"},
@@ -171,11 +168,15 @@ describe('sortData', () => {
   });
 
   it('debería retornar un array de objetos ordenado por "name" de a-z', () => {
-    expect(sortData(inputSort, condition1)).toEqual(outputSortAZ);
+    expect(sortData(inputSort, 'Az')).toEqual(outputSortAZ);
   });
 
   it('debería retornar un array de objetos ordenado por "name" de z-a', () => {
-    expect(sortData(inputSort, condition2)).toEqual(outputSortZA);
+    expect(sortData(inputSort, 'Za')).toEqual(outputSortZA);
+  });
+
+  it('debería retornar un array de objetos ordenado por "name" de z-a', () => {
+    expect(sortData(inputSort)).toEqual();
   });
 });
 
@@ -185,17 +186,11 @@ describe('filterData', () => {
   });
 
   it('debería retornar un array de objetos por "type" ', () => {
-    expect(filterData(POKEMON, conditionFilter)).toEqual(outputFilter);
-  });
-});
-
-describe('filterWeak', () => {
-  it('debería ser una función', () => {
-    expect(typeof filterWeak).toBe('function');
+    expect(filterData(POKEMON, conditionFilter, 'type')).toEqual(outputFilter);
   });
 
   it('debería retornar un array de objetos por "weaknesses" ', () => {
-    expect(filterWeak(POKEMON, conditionWeak)).toEqual(outputWeak);
+    expect(filterData(POKEMON, conditionWeak, 'weaknesses')).toEqual(outputWeak);
   });
 });
 
@@ -211,21 +206,16 @@ describe('filterEgg', () => {
 
 describe('computeStats', () => {
   it('debería ser una función', () => {
-    expect(typeof window.computeStats.weight).toBe('function');
+    expect(typeof window.computeStats.statsPromedy).toBe('function');
   });
 
   it('debería retornar el promedio de "weight" de los Pokemones', () => {
-    expect(window.computeStats.weight(POKEMON, sumWeight)).toEqual(resultSumWeight);
+    expect(window.computeStats.statsPromedy(POKEMON, sumWeight)).toEqual(resultSumWeight);
   });
-});
-
-describe('computeStats', () => {
-  it('debería ser una función', () => {
-    expect(typeof window.computeStats.height).toBe('function');
-  });
-
 
   it('debería retornar el promedio de "height" de los Pokemones', () => {
-    expect(window.computeStats.height(POKEMON, sumHeight)).toEqual(resultSumHeight);
+    expect(window.computeStats.statsPromedy(POKEMON, sumHeight)).toEqual(resultSumHeight);
   });
 });
+
+

@@ -36,12 +36,12 @@ buttonZA.addEventListener("click", () => {
 // FILTRAR POR TIPO DE POKEMON
 selectFilterType.addEventListener("change", () => {
   firstPage.innerHTML = '';
-  showPokemonList(filterData(allDataPokemon, selectFilterType.value));
+  showPokemonList(filterData(allDataPokemon, selectFilterType.value, 'type'));
 });
 //FILTRAR POKEMONES POR DEBILIDAD
 selectFilterWeak.addEventListener("change", () => {
   firstPage.innerHTML = '';
-  showPokemonList(filterWeak(allDataPokemon, selectFilterWeak.value));
+  showPokemonList(filterData(allDataPokemon, selectFilterWeak.value, 'weaknesses'));
 });
 //FILTRAR POKEMONES POR HUEVOS
 selectFilterEgg.addEventListener("change", () => {
@@ -50,9 +50,9 @@ selectFilterEgg.addEventListener("change", () => {
 });
 //HACER CÁLCULO DEL PROMEDIO DE LA SUMA DE ALTURA Y PESO DE TODOS LOS POKEMONES
 buttonSumWeight.addEventListener("click", () => {
-  resultStats.innerHTML = ("El promedio de su peso es " + computeStats.weight(allDataPokemon) + "kg.");
+  resultStats.innerHTML = ("El promedio de su peso es " + computeStats.statsPromedy(allDataPokemon, 'weight') + "kg.");
 });
 
 buttonSumHeight.addEventListener("click", () => {
-  resultStats.innerHTML = ("El promedio de su talla es " + computeStats.height(allDataPokemon) + "m.");
+  resultStats.innerHTML = ("El promedio de su talla es " + computeStats.statsPromedy(allDataPokemon, 'height') + "m.");
 });
