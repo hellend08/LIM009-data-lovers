@@ -4,6 +4,7 @@ const compareSortData = (elemA, elemB) => {
     return 1;
   if (elemA.name < elemB.name)
     return -1;
+  return 0;
 };
 
 const sortData = (data, sortBy) => {
@@ -43,18 +44,16 @@ window.filterEgg = filterEgg;
 
 //SUMA PESO TODOS LOS POKEMONES***
 window.computeStats = {
-  statsPromedy: (data, type) => {
+  statsPromedy: (data, stats) => {
     let finalResult;
     let sumWeight = 0;
-    for (let i = 0; i < data.length; i++) {
-      if (data[i][type]) {
-        const number = data[i][type];
+    data.forEach((data) => {
+        const number = data[stats];
         const onlyNumber = number.split(" ");
         sumWeight += parseFloat(onlyNumber); 
-      }
-    }
+      });
+
     finalResult = sumWeight/data.length;
     return finalResult.toFixed(2);
   },
 };
-//UTILIZAR ARRAY PARA RECORRER MAS NO EL FOR. 

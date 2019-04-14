@@ -10,17 +10,18 @@ const buttonSumHeight = document.getElementById("all-height");
 const resultStats = document.getElementById("stats");
 //PINTAR TODOS LOS POKEMONES
 const showPokemonList = (allDataPokemon) => {
-  for (let i = 0; i < allDataPokemon.length; i++) {
+  allDataPokemon.forEach((data) => {
     firstPage.innerHTML += `
      <div class="colorPokemon" >
-     <p>${allDataPokemon[i].name}</p>
+     <p>${data.name}</p>
      <figure>
-     <img src= "${allDataPokemon[i].img}">
+     <img src= "${data.img}">
      </figure>
-     <p>${allDataPokemon[i].egg}</p>
+     <p>${data.egg}</p>
      </div>
-    ` ;
-  }
+     `;
+    return allDataPokemon;
+  });
 }
 showPokemonList(allDataPokemon);
 //ORDENAR DE A-Z

@@ -175,8 +175,8 @@ describe('sortData', () => {
     expect(sortData(inputSort, 'Za')).toEqual(outputSortZA);
   });
 
-  it('debería retornar un array de objetos ordenado por "name" de z-a', () => {
-    expect(sortData(inputSort)).toEqual();
+  it('debería retornar un array de objetos con la data', () => {
+    expect(sortData(POKEMON, '0' )).toEqual(POKEMON);
   });
 });
 
