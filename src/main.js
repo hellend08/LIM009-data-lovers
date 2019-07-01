@@ -13,11 +13,10 @@ const showPokemonList = (allDataPokemon) => {
   allDataPokemon.forEach((data) => {
     firstPage.innerHTML += `
      <div class="colorPokemon" >
-     <p>${data.name}</p>
-     <figure>
-     <img src= "${data.img}">
-     </figure>
-     <p>${data.egg}</p>
+       <p>${data.name}</p>
+       <figure class="">
+         <img src= "${data.img}">
+       </figure>
      </div>
      `;
     return allDataPokemon;

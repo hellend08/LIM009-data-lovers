@@ -16,7 +16,7 @@ body{
   /* Global */
   .container{
     width:80%;
-    margin:auto;
+    margin:0px 0px 30px;
     overflow:hidden;
   }
   
@@ -53,7 +53,7 @@ body{
   
   
   header a{
-    color:black; 
+    color:rgb(128, 127, 127); 
     font-weight: bold;
     text-decoration:none;
     text-transform: uppercase;
@@ -74,20 +74,25 @@ body{
     margin:0;
   }
   
-  header nav{
+  /* header nav{
     float:right;
     margin-top:30px;
-  }
+  } */
   
-  header .highlight, header .current a{
+  /* header .highlight, header .current a{
     color:#f89144; ;
     font-weight:bold;
-  }
+  } */
   
   header a:hover{
-    color:#cccccc;
+    color:#f89144;
     font-weight:bold;
+    text-decoration: none;
   } 
+
+  .text-stats {
+    font-size: 1.2rem;
+  }
   
   
   
@@ -97,6 +102,7 @@ body{
     color:#ffffff;
     background:#35424a;
     text-align: center;
+    /* margin: 20px; */
   }
   
   #newsletter h1{
@@ -117,7 +123,8 @@ body{
   
   /* Boxes */
   #boxes{
-    margin-top:20px;
+    margin: 70px 20px 0px 20px;
+    float: right;
   }
   
   #boxes .box{
@@ -130,13 +137,19 @@ body{
   #boxes .box img{
     width:90px;
   }
+
+  #true {
+    margin: 20px 0px;
+  }
   
   .colorPokemon {
     display: inline-block;
     text-align: center;
     font-weight: bold;
     /* border: 1px solid #e8491d; */
+    padding: 25px 30px;
     margin-top: 20px;
+    margin: 10px;
     cursor: pointer;
     transition: background-color .5s;
   }
@@ -166,8 +179,9 @@ body{
   .logo{
     height: 50px;
     width: 240px;
-    margin-top: 15px;
-    margin-left: -28px;
+    /* margin-top: 15px; */
+    margin-left: -10px;
+    margin-right: 37.9rem;
   }
   .img{
     height: 90px;
@@ -200,9 +214,9 @@ body{
   
   header {
     /* min-height: 450px; */
-    background: url(http://i65.tinypic.com/2ewf6o5.jpg) no-repeat 0 -60px;
+    background: url(http://i65.tinypic.com/2ewf6o5.jpg) no-repeat 0 -60px ;
     text-align: center;
-    background-size: 105% 125%;
+    background-size: 100% 125%;
     color: #ffffff;
     height: 77vh;
   }
