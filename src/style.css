@@ -74,16 +74,6 @@ body{
     margin:0;
   }
   
-  /* header nav{
-    float:right;
-    margin-top:30px;
-  } */
-  
-  /* header .highlight, header .current a{
-    color:#f89144; ;
-    font-weight:bold;
-  } */
-  
   header a:hover{
     color:#f89144;
     font-weight:bold;
@@ -102,7 +92,6 @@ body{
     color:#ffffff;
     background:#35424a;
     text-align: center;
-    /* margin: 20px; */
   }
   
   #newsletter h1{
@@ -146,7 +135,6 @@ body{
     display: inline-block;
     text-align: center;
     font-weight: bold;
-    /* border: 1px solid #e8491d; */
     padding: 25px 30px;
     margin-top: 20px;
     margin: 10px;
@@ -179,7 +167,6 @@ body{
   .logo{
     height: 50px;
     width: 240px;
-    /* margin-top: 15px; */
     margin-left: -10px;
     margin-right: 37.9rem;
   }
@@ -220,9 +207,9 @@ body{
     color: #ffffff;
     height: 77vh;
   }
-  
-  /* Media Queries */
-  @media(max-width: 768px){
+
+/* Media Queries */
+@media(max-width: 768px){
     header #branding,
     header
     header nav,
@@ -257,28 +244,26 @@ body{
       margin-bottom:5px;
     }
   }
-  
-  
+
   @media (max-width: 650px){
   header {
       background-size: cover;
       height: 37vh;
-  }}
-  
-  @media (max-width: 426px){
-    header {
+  }
+}
+
+@media (max-width: 426px){
+  header {
       background-size: cover;
       height: 145px;
       padding-bottom: 0vh;
   }
-  
-  
-  }
-  
-  
-  @media (max-width: 320px){
+}
+
+@media (max-width: 320px){
   header {
-      height: 131px;
-      padding-bottom: 0vh;
-  }}
+    height: 131px;
+    padding-bottom: 0vh;
+  }
+}
   

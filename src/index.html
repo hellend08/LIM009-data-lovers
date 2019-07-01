@@ -11,12 +11,9 @@
 
 <body>
   <header>
-    <div class="">
-      <!-- <div id="branding">
-        <h1><img src="./img/logo_poke.png" class="logo" alt="./img/logo_poke.png"></h1>
-      </div> -->
+    <div>
       <nav class="navbar">
-          <img src="./img/logo_poke.png" class="logo" alt="./img/logo_poke.png">
+        <img src="./img/logo_poke.png" class="logo" alt="./img/logo_poke.png">
         <ul class="nav justify-content-end">
           <li class="current"><a href="index.html">Home</a></li>
           <li><a href="#newsletter">RANDOM</a></li>
@@ -28,9 +25,9 @@
   <section id="newsletter">
     <div class="container">
       <h2>¡Usa la búsqueda avanzada para encontrar Pokémones según su tipo, debilidad, habilidad y demás datos!</h2>
-      <h4> DATO CURIOSO: 
-      <br>
-      ¿Sabías cuál es el tamaño o altura promedio de todos los pokémones?</h4>
+      <h4> DATO CURIOSO:
+        <br>
+        ¿Sabías cuál es el tamaño o altura promedio de todos los pokémones?</h4>
       <button id="all-height" class="btn btn-lg btn-warning" style="margin: 10px">Talla </button>
       <button id="all-weight" class="btn btn-lg btn-warning">Peso</button>
       <aside class="sections-container" id="sections-menu">
@@ -61,50 +58,50 @@
   </section>
   <section id="true">
     <div id="root">
-        <button id="a-z" class="btn btn-lg btn-warning">POKEMON A-Z </button>
-        <button id="z-a" class="btn btn-lg btn-warning">POKEMON Z-A </button>
-        <select class="custom-select col-md-2" id="option-pokemon">
-          <option value="play-now">Tipos de Pokemon</option>
-          <option value="Grass">Hierba</option>
-          <option value="Poison">Veneno</option>
-          <option value="Fire">Fuego</option>
-          <option value="Water">Agua</option>
-          <option value="Ice">Hielo</option>
-          <option value="Flying">Volador</option>
-          <option value="Psychic">Psíquico</option>
-          <option value="Rock">Roca</option>
-          <option value="Ground">Piedra</option>
-          <option value="Electric">Eléctrico</option>
-          <option value="Bug">Bicho</option>
-          <option value="Normal">Normal</option>
-          <option value="Fighting">Peleador</option>
-          <option value="Ghost">Fantasma</option>
-        </select>
-        <select class="custom-select col-md-2" id="option-pokemon-weak">
-          <option value="play-now">Selecciona por debilidad</option>
-          <option value="Grass">Hierba</option>
-          <option value="Poison">Veneno</option>
-          <option value="Fire">Fuego</option>
-          <option value="Water">Agua</option>
-          <option value="Ice">Hielo</option>
-          <option value="Flying">Volador</option>
-          <option value="Psychic">Psíquico</option>
-          <option value="Rock">Roca</option>
-          <option value="Ground">Piedra</option>
-          <option value="Electric">Eléctrico</option>
-          <option value="Bug">Bicho</option>
-          <option value="Normal">Normal</option>
-          <option value="Fighting">Peleador</option>
-          <option value="Ghost">Fantasma</option>
-          <option value="Dark">Oscuro</option>
-          <option value="Fairy">Hada</option>
-        </select>
-        <select class="custom-select col-md-2" id="option-pokemon-egg">
-          <option value="play-now">Huevos</option>
-          <option value="2 km">2 km</option>
-          <option value="5 km">5 km</option>
-          <option value="10 km">10 km</option>
-        </select>
+      <button id="a-z" class="btn btn-lg btn-warning">POKEMON A-Z </button>
+      <button id="z-a" class="btn btn-lg btn-warning">POKEMON Z-A </button>
+      <select class="custom-select col-md-2" id="option-pokemon">
+        <option value="play-now">Tipos de Pokemon</option>
+        <option value="Grass">Hierba</option>
+        <option value="Poison">Veneno</option>
+        <option value="Fire">Fuego</option>
+        <option value="Water">Agua</option>
+        <option value="Ice">Hielo</option>
+        <option value="Flying">Volador</option>
+        <option value="Psychic">Psíquico</option>
+        <option value="Rock">Roca</option>
+        <option value="Ground">Piedra</option>
+        <option value="Electric">Eléctrico</option>
+        <option value="Bug">Bicho</option>
+        <option value="Normal">Normal</option>
+        <option value="Fighting">Peleador</option>
+        <option value="Ghost">Fantasma</option>
+      </select>
+      <select class="custom-select col-md-2" id="option-pokemon-weak">
+        <option value="play-now">Selecciona por debilidad</option>
+        <option value="Grass">Hierba</option>
+        <option value="Poison">Veneno</option>
+        <option value="Fire">Fuego</option>
+        <option value="Water">Agua</option>
+        <option value="Ice">Hielo</option>
+        <option value="Flying">Volador</option>
+        <option value="Psychic">Psíquico</option>
+        <option value="Rock">Roca</option>
+        <option value="Ground">Piedra</option>
+        <option value="Electric">Eléctrico</option>
+        <option value="Bug">Bicho</option>
+        <option value="Normal">Normal</option>
+        <option value="Fighting">Peleador</option>
+        <option value="Ghost">Fantasma</option>
+        <option value="Dark">Oscuro</option>
+        <option value="Fairy">Hada</option>
+      </select>
+      <select class="custom-select col-md-2" id="option-pokemon-egg">
+        <option value="play-now">Huevos</option>
+        <option value="2 km">2 km</option>
+        <option value="5 km">5 km</option>
+        <option value="10 km">10 km</option>
+      </select>
       <aside class="sections-container" id="sections-menu-two"></aside>
       <div class="pokemon-list" id="pokemones"></div>
     </div>
@@ -118,5 +115,4 @@
   <script src="../src/bootstrap/js/jquery-3.4.1.min.js"></script>
   <script src="../src/bootstrap/js/bootstrap.min.js"></script>
 </body>
-
 </html>

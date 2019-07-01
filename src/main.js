@@ -14,8 +14,8 @@ const showPokemonList = (allDataPokemon) => {
     firstPage.innerHTML += `
      <div class="colorPokemon" >
        <p>${data.name}</p>
-       <figure class="">
-         <img src= "${data.img}">
+       <figure>
+         <img src="${data.img}" alt="img-pokemon">
        </figure>
      </div>
      `;
