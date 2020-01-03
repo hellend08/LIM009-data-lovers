@@ -53,7 +53,7 @@ body{
   
   
   header a{
-    color:rgb(128, 127, 127); 
+    color:rgb(59, 59, 59); 
     font-weight: bold;
     text-decoration:none;
     text-transform: uppercase;
@@ -62,8 +62,9 @@ body{
   
   header li{
     /*float:left;*/
-    display:inline;
+    display:inline-block;
     padding: 0 40px 0 20px;
+    margin-top: 3px;
   }
   
   header #branding{
@@ -179,9 +180,9 @@ body{
   .logo{
     height: 50px;
     width: 240px;
-    /* margin-top: 15px; */
-    margin-left: -10px;
-    margin-right: 37.9rem;
+    margin-top: 6px;
+    /* margin-left: -5px; */
+    margin-right: 25.9rem;
   }
   .img{
     height: 90px;
@@ -214,11 +215,12 @@ body{
   
   header {
     /* min-height: 450px; */
-    background: url(http://i65.tinypic.com/2ewf6o5.jpg) no-repeat 0 -60px ;
+    /* background: url(http://i65.tinypic.com/2ewf6o5.jpg) no-repeat 0 -60px ; */
+    background: url(img/new-wall-pokemon.jpg);
     text-align: center;
-    background-size: 100% 125%;
+    background-size: 100% 115%;
     color: #ffffff;
-    height: 77vh;
+    height: 90vh;
   }
   
   /* Media Queries */
